@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Persegi</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+        function hitungLuasKeliling()
+        {
+            var Sisi, Keliling, Luas;
+
+            Sisi = parseInt(document.getElementById("sisi").value);
+            Luas = Sisi * Sisi
+            Keliling = 4 * Sisi
+            document.getElementById("luas").value = Luas;
+            document.getElementById("keliling").value = Keliling;
+        }
+        function reset()
+        {
+            document.getElementById("sisi").value = "";
+            document.getElementById("luas").value = "";
+            document.getElementById("keliling").value = "";
+	    }
+</script>
+    
+
+</head>
+<body>
+    <header>
+        <h1> Kalkulator Hitung Persegi </h1>
+    </header>
+
+    <img src="kotak.jpg" style="display: block; margin: auto;" > 
+    
+    <form>
+        <p>Rumus Luas dan keliling persegi sama sisi</p>
+<pre>
+Luas        : Sisi X Sisi
+Keliling    :  4 X Sisi
+Tekan tombol hitung untuk melihat hasil hitungan
+Tekan tombol reset untuk membersihkan semua inputan
+</pre>
+    </form>
+    <hr>
+
+    <section class="LuasInputSection">
+        <label for="sisi">Sisi Persegi</label>
+        <input type="number" id="sisi" placeholder="Masukkan Sisi">
+</section>
+<section class="inputButtonSection">
+       <button onclick="hitungLuasKeliling();">Hitung</button>
+       <button onclick="reset();"> Reset </button>
+          
+</section>
+
+<section class="HasilSection">
+    <label for="inputField1">Luas </label>
+    <input type="text" id="luas">
+    <label for="inputField2">Keliling </label>
+    <input type="text" id="keliling">
+   
+            
+</section>
+
+    
+</body>
+</html>
